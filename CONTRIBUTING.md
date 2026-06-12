@@ -1,6 +1,6 @@
 # CONTRIBUTING
 
-仅针对此针对翻译版本的翻译工作.
+仅针对此翻译版本的工作.
  参考 [CONTRIBUTING - original](https://github.com/nnethercote/perf-book/blob/master/CONTRIBUTING.md)
 
 ## 书名和专业术语
