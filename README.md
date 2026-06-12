@@ -1,74 +1,71 @@
-# perf-book
+# perf-book-zh
 
-The Rust Performance Book.
+The Rust Performance Book 中文翻译.
 
-## Viewing
+## 阅读本书
 
-The rendered (HTML) book is [here](https://nnethercote.github.io/perf-book/).
+[英文原版](https://nnethercote.github.io/perf-book/)
 
-<!-- EPUB
-Currently disabled due to
-https://github.com/nnethercote/perf-book/actions/runs/6358429874/job/17270643057
+[本书的中文翻译](https://fleetinglore.github.io/perf-book-zh/)
 
-An ePub version is available
-[here](https://nnethercote.github.io/perf-book/The%20Rust%20Performance%20Book.epub).
-experimental. The ePub file is generated with
-[mdbook-epub](https://crates.io/crates/mdbook-epub), which is experimental. It
-has excessive whitespace and is not as nice to read as the HTML version.
-Nonetheless, it is usable if you really want to read the book on an e-reader.
--->
+## 自行构建
 
-## Building
+此书采用 [`mdbook`](https://github.com/rust-lang/mdBook),
+ 可以按以下方法构建这个工具:
 
-The book is built with [`mdbook`](https://github.com/rust-lang/mdBook), which
-can be installed with this command:
-```
+```bash
 cargo install mdbook
 ```
-To build the book, run this command:
-```
+
+以此构建本书:
+
+```bash
 mdbook build
 ```
-The generated files are put in the `book/` directory.
 
-## Development
+所生成的文件将位于 `book/` 路径下
 
-To view the built book, run this command:
-```
+## 对于开发
+
+以此检查本地的版本:
+
+```bash
 mdbook serve
 ```
-This will launch a local web server to serve the book. View the built book by
-navigating to `localhost:3000` in a web browser. While the web server is
-running, the rendered book will automatically update if the book's files
-change.
 
-To test the code within the book, run this command:
-```
+这将在本地的 `3000` 端口创建一个动态同步更新的服务器,
+ 以预览构建后的版本
+
+以此运行相关测试:
+
+```bash
 mdbook test
 ```
 
-## Improvements
+## 意见建议
 
-Suggestions for improvements are welcome, but I prefer them to be filed as
-issues rather than pull requests. This is because I am very particular about
-the wording used in the book. When pull requests are made, I typically take the
-underlying idea of a pull request and rewrite it into my own words anyway.
+本人出于学习目的翻译此书,
+ 欢迎对译文中的**术语译法,
+ 表达准确性,
+ 知识性错误**提出意见
 
-This book contains no material produced by generative AI, and none will be
-accepted.
+翻译除参考[原版](https://github.com/nnethercote/perf-book)外,
+ 还参考了以下已有译本:
 
-## License
+  * [Blues-star/perf-book-zh](https://github.com/Blues-star/perf-book-zh)
+  * [mokurin000/perf-book-zh](https://github.com/mokurin000/perf-book-zh)
+  * [JohnTitor/perf-book-ja](https://github.com/JohnTitor/perf-book-ja)
 
-Licensed under either of
-* Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or
-  http://www.apache.org/licenses/LICENSE-2.0)
-* MIT license ([LICENSE-MIT](LICENSE-MIT) or
-  http://opensource.org/licenses/MIT)
+## 许可证
 
-at your option.
+可以选择使用以下任一许可证:
 
-## Contribution
+  * [LICENSE-APACHE-2.0](LICENSE-APACHE)
+  * [LICENSE-MIT](LICENSE-MIT)
 
-Unless you explicitly state otherwise, any contribution intentionally submitted
-for inclusion in the work by you, as defined in the Apache-2.0 license, shall
-be dual licensed as above, without any additional terms or conditions.
+## 贡献
+
+除非你明确说明,
+ 否则你按照 Apache-2.0 许可证提交的任何打算纳入作品的贡献,
+ 都将按上述方式双重授权,
+ 不附加任何额外条款或条件.

@@ -1,44 +1,44 @@
 name: CI
 
 on:
-  pull_request:
-  push:
-    branches:
-      - master
+    pull_request:
+    push:
+        branches:
+            - main
 
 jobs:
-  test_and_maybe_deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
+    test_and_maybe_deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Clone repository
+              uses: actions/checkout@v4
 
-      - name: Setup mdbook
-        uses: peaceiris/actions-mdbook@v2
-        with:
-          mdbook-version: "latest"
+            - name: Setup mdbook
+              uses: peaceiris/actions-mdbook@v2
+              with:
+                  mdbook-version: "latest"
 
-      # EPUB
-      # Currently disabled due to
-      # https://github.com/nnethercote/perf-book/actions/runs/6358429874/job/17270643057
-      #- name: Setup mdbook-epub
-      #  run: cargo install mdbook-epub
+            # EPUB
+            # Currently disabled due to
+            # https://github.com/nnethercote/perf-book/actions/runs/6358429874/job/17270643057
+            #- name: Setup mdbook-epub
+            #  run: cargo install mdbook-epub
 
-      - name: Build
-        run: mdbook build
+            - name: Build
+              run: mdbook build
 
-      - name: Test
-        run: mdbook test
+            - name: Test
+              run: mdbook test
 
-      # EPUB
-      #- name: Copy ePub
-      #  run: cp book/epub/The\ Rust\ Performance\ Book.epub book/html
+            # EPUB
+            #- name: Copy ePub
+            #  run: cp book/epub/The\ Rust\ Performance\ Book.epub book/html
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          #publish_dir: ./book/html  # use if EPUB is enabled
-          publish_dir: ./book # use if EPUB is disabled
-        # Only deploy on a push to master, not on a pull request.
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'nnethercote/perf-book'
+            - name: Deploy
+              uses: peaceiris/actions-gh-pages@v4
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  #publish_dir: ./book/html  # use if EPUB is enabled
+                  publish_dir: ./book # use if EPUB is disabled
+              # Only deploy on a push to master, not on a pull request.
+              if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'nnethercote/perf-book'

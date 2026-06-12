@@ -1,25 +1,18 @@
 [book]
-title = "The Rust Performance Book"
-authors = ["Nicholas Nethercote"]
+title = "The Rust Performance Book 中文翻译"
+authors = ["Nicholas Nethercote", "Fleeting Lore"]
 src = "src"
-language = "en"
+language = "zh"
 
 [build]
 create-missing = false
 
 [rust]
-edition = "2018"
+edition = "2024"
 
 [output.html]
 smart-punctuation = true
-default-theme = "rust"
-git-repository-url = "https://github.com/nnethercote/perf-book"
+default-theme = "ayu"
+git-repository-url = "https://github.com/FleetingLore/perf-book-zh"
 edit-url-template = "https://github.com/nnethercote/perf-book/edit/master/{path}"
 site-url = "https://nnethercote.github.io/perf-book/"
-
-# EPUB
-# Currently disabled due to
-# https://github.com/nnethercote/perf-book/actions/runs/6358429874/job/17270643057
-#[output.epub]
-#optional = true  # So epub generation is skipped if mdbook-epub isn't installed.
-

@@ -5,3 +5,6 @@ book
 
 # Also `diff` files, which I generate a lot.
 diff
+
+# for macOS only
+.DS_Store
