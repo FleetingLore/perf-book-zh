@@ -15,10 +15,9 @@
 - [Iterators](iterators.md)
 - [Bounds Checks](bounds-checks.md)
 - [I/O](io.md)
-- [Logging and Debugging](logging-and-debugging.md)
+- [日志与调试](logging-and-debugging.md)
 - [Wrapper Types](wrapper-types.md)
-- [Machine Code](machine-code.md)
-- [Parallelism](parallelism.md)
+- [机器码](machine-code.md)
+- [并行](parallelism.md)
 - [General Tips](general-tips.md)
 - [Compile Times](compile-times.md)
-
