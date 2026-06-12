@@ -57,6 +57,6 @@ program.
 
 ---
 
-`benchmarking` 基准测试工作
+[`benchmarking`](https://zh.wikipedia.org/wiki/基准测试) 基准测试工作
 
-`version` 版本
+[`version`](https://zh.wikipedia.org/wiki/软件版本编号) 版本
