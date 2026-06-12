@@ -3,6 +3,12 @@
 仅针对此针对翻译版本的翻译工作.
  参考 [CONTRIBUTING - original](https://github.com/nnethercote/perf-book/blob/master/CONTRIBUTING.md)
 
+## 书名和专业术语
+
+不作翻译
+
+这包括了各章节的标题
+
 ## 每行的文字数限制
 
 原版采用上限 79, 本版本采用上限 60
