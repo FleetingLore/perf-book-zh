@@ -2,7 +2,7 @@
 
 对于同一个任务, **基准测试工作**可比较不同实现方法的性能.
  有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
- 有时则比较同一程序的两个不同版本.
+ 有时则比较同一程序的两个不同**版本**.
  后者通常更容易回答 "这个改动是否使软件更快地完成任务?" 这样的问题
 
 Benchmarking typically involves comparing the performance of two or more
