@@ -40,5 +40,5 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   #publish_dir: ./book/html  # use if EPUB is enabled
                   publish_dir: ./book # use if EPUB is disabled
-              # Only deploy on a push to master, not on a pull request.
-              if: github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository == 'nnethercote/perf-book'
+              # Always deploy on push
+              if: github.event_name == 'push'
