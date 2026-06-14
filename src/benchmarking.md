@@ -1,32 +1,24 @@
 # Benchmarking
 
-对于同一个任务, **基准测试工作**可比较不同实现方法的性能.
+对于同一个任务, **基准测试工作** 可比较不同实现方法的性能.
  有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
- 有时则比较同一程序的两个不同**版本**.
+ 有时则比较同一程序的两个不同 **版本**.
  后者通常更容易回答 "这个改动是否使软件更快地完成任务?" 这样的问题
 
-Benchmarking is a complex topic and a thorough coverage is beyond the scope of
-this book, but here are the basics.
+基准测试工作很复杂, 完整介绍超出了本书的范围, 但这里会覆盖一些基础
 
-First, you need workloads to measure. Ideally, you would have a variety of
-workloads that represent realistic usage of your program. Workloads using
-real-world inputs are best, but [microbenchmarks] and [stress tests] can be
-useful in moderation.
+首先, 你需要 **工作负载** 来做测量.
+ 理想情况下, 你会有各种工作负载, 反映被测试程序在使用时的情况.
+ 真实环境下的输入是最有效的, 但 **微基准测试** 和 **压力测试** 的适度使用也有帮助
 
-[microbenchmarks]: https://stackoverflow.com/questions/2842695/what-is-microbenchmarking
-[stress tests]: https://en.wikipedia.org/wiki/Stress_testing_(software)
+其次, 你需要一种运行工作负载的方式, 这也确定了所使用的度量标准
 
-Second, you need a way to run the workloads, which will also dictate the
-metrics used.
-- Rust's built-in [benchmark tests] are a simple starting point, but they use
-  unstable features and therefore only work on nightly Rust.
-- [Criterion] and [Divan] are more sophisticated alternatives.
-- [Hyperfine] is an excellent general-purpose benchmarking tool.
-- [Bencher] can do continuous benchmarking on CI, including GitHub CI.
-- [Gungraun] provides `cargo bench` integration with high-precision
-  measurements.
-- Custom benchmarking harnesses are also possible. For example, [rustc-perf] is
-  the harness used to benchmark the Rust compiler.
+- Rust 内置的 [benchmark tests] 是一个简单的起点, 但它们使用了不稳定的特性, 只能在 Nightly Rust 上运行
+- [Criterion] 和 [Divan] 是更复杂的替代方案
+- [Hyperfine] 是一个出色的基准测试工具, 面向广泛的使用情形
+- [Bencher] 可以在 CI 上持续运行基准测试, 包括 GitHub CI
+- [Gungraun] 与 `cargo bench` 对接, 提供高精度测量
+- 也可以搭建自定义的基准测试框架, 例如 [rustc-perf] 对 Rustc 进行基准测试
 
 [benchmark tests]: https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html
 [Criterion]: https://github.com/bheisler/criterion.rs
@@ -57,6 +49,12 @@ program.
 
 ---
 
-[`benchmarking`](https://zh.wikipedia.org/wiki/基准测试) 基准测试工作
+[`benchmarking`](https://chat.deepseek.com/share/f3dccyot5ccyw188f5) 基准测试工作
 
-[`version`](https://zh.wikipedia.org/wiki/软件版本编号) 版本
+[`version`](https://chat.deepseek.com/share/j3fw26ampi0x6uzniw) 版本
+
+[`workloads`](https://chat.deepseek.com/share/233p8r8ikd4t5wk5bg) 工作负载
+
+[`microbenchmarks`](https://chat.deepseek.com/share/jqu83xiuhxsnbpoi2q) 微基准测试
+
+[`stress tests`](https://chat.deepseek.com/share/wura1hxt9m0crsv9wd) 压力测试
