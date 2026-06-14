@@ -1,11 +1,11 @@
 # Benchmarking
 
-对于同一个任务, **基准测试工作** 可比较不同实现方法的性能.
+对于同一个任务, **基准测试** 可比较不同实现方法的性能.
  有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
  有时则比较同一程序的两个不同 **版本**.
  后者通常更容易回答 "这个改动是否使软件更快地完成任务?" 这样的问题
 
-基准测试工作很复杂, 完整介绍超出了本书的范围, 但这里会覆盖一些基础
+基准测试很复杂, 完整介绍超出了本书的范围, 但这里会覆盖一些基础
 
 首先, 你需要 **工作负载** 来做测量.
  理想情况下, 你会有各种工作负载, 反映被测试程序在使用时的情况.
@@ -35,19 +35,16 @@
  具体来说, 内存布局的微小变化可能引起显著但短暂的性能波动.
  因此, 其他波动较小的度量标准, 例如 **周期计数** 或 **指令计数**, 可能是合理的替代
 
-Summarizing measurements from multiple workloads is also a challenge, and there
-are a variety of ways to do it, with no single method being obviously best.
+对若干工作负载的测量结果的总结也是一个挑战, 有多种方法, 但并没有一种通用的最好方法
 
-Good benchmarking is hard. Having said that, do not stress too much about
-having a perfect benchmarking setup, particularly when you start optimizing a
-program. Mediocre benchmarking is far better than no benchmarking. Keep an open
-mind about what you are measuring, and over time you can make benchmarking
-improvements as you learn about the performance characteristics of your
-program.
+做好基准测试是困难的.
+ 话虽如此, 不必在配置上过于追求完美, 尤其是在开始优化程序时.
+ 基准测试, 有总比没有好.
+ 应以开放的心态看待基准测试工作, 随着对程序性能特征的了解加深, 基准测试工作也会随之改进
 
 ---
 
-[`benchmarking`](https://chat.deepseek.com/share/f3dccyot5ccyw188f5) 基准测试工作
+[`benchmarking`](https://chat.deepseek.com/share/f3dccyot5ccyw188f5) 基准测试
 
 [`version`](https://chat.deepseek.com/share/j3fw26ampi0x6uzniw) 版本
 
