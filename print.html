@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "ayu";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-f827c08e.js";
+            window.path_to_searchindex_js = "searchindex-7b929aba.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-90871fb8.js"></script>
@@ -191,8 +191,44 @@
 <h1 id="introduction"><a href="#introduction" class="header">Introduction</a></h1>
 <p>indev</p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="benchmarking"><a href="#benchmarking" class="header">Benchmarking</a></h1>
-<p>indev</p>
+<h1 id="benchmarking"><a class="header" href="#benchmarking">Benchmarking</a></h1>
+<p>对于同一个任务, <strong>基准测试</strong> 可比较不同实现方法的性能.
+有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
+有时则比较同一程序的两个不同 <strong>版本</strong>.
+后者通常更容易回答 “这个改动是否使软件更快地完成任务?” 这样的问题</p>
+<p>基准测试很复杂, 完整介绍超出了本书的范围, 但这里会覆盖一些基础</p>
+<p>首先, 你需要 <strong>工作负载</strong> 来做测量.
+理想情况下, 你会有各种工作负载, 反映被测试程序在使用时的情况.
+真实环境下的输入是最有效的, 但 <strong>微基准测试</strong> 和 <strong>压力测试</strong> 的适度使用也有帮助</p>
+<p>其次, 你需要一种运行工作负载的方式, 这也制约了所使用的度量标准</p>
+<ul>
+<li>Rust 内置的 <a href="https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html">benchmark tests</a> 是一个简单的起点, 但它们使用了不稳定的特性, 只能在 Nightly Rust 上运行</li>
+<li><a href="https://github.com/bheisler/criterion.rs">Criterion</a> 和 <a href="https://github.com/nvzqz/divan">Divan</a> 是更复杂的替代方案</li>
+<li><a href="https://github.com/sharkdp/hyperfine">Hyperfine</a> 是一个出色的基准测试工具, 面向广泛的使用情形</li>
+<li><a href="https://github.com/bencherdev/bencher">Bencher</a> 可以在 CI 上持续运行基准测试, 包括 GitHub CI</li>
+<li><a href="https://github.com/gungraun/gungraun">Gungraun</a> 与 <code>cargo bench</code> 对接, 提供高精度测量</li>
+<li>也可以搭建自定义的基准测试框架, 例如 <a href="https://github.com/rust-lang/rustc-perf/">rustc-perf</a> 对 Rustc 进行基准测试</li>
+</ul>
+<p>至于度量标准, 有多种选择, 这取决于被测程序的特性.
+例如, 适用于批处理程序的, 未必适用于交互式程序.
+<strong>墙钟时间</strong> 是许多情形下的自然选择, 因为它对应了用户的直观感受.
+然而, 它的波动可能较大.
+具体来说, 内存布局的微小变化可能引起显著但短暂的性能波动.
+因此, 其他波动较小的度量标准, 例如 <strong>周期计数</strong> 或 <strong>指令计数</strong>, 可能是合理的替代</p>
+<p>对若干工作负载的测量结果的总结也是一个挑战, 有多种方法, 但并没有一种通用的最好方法</p>
+<p>做好基准测试是困难的.
+话虽如此, 不必在配置上过于追求完美, 尤其是在开始优化程序时.
+基准测试, 有总比没有好.
+应以开放的心态看待基准测试工作, 随着对程序性能特征的了解加深, 基准测试工作也会随之改进</p>
+<hr>
+<p><a href="https://chat.deepseek.com/share/f3dccyot5ccyw188f5"><code>benchmarking</code></a> 基准测试</p>
+<p><a href="https://chat.deepseek.com/share/j3fw26ampi0x6uzniw"><code>version</code></a> 版本</p>
+<p><a href="https://chat.deepseek.com/share/233p8r8ikd4t5wk5bg"><code>workloads</code></a> 工作负载</p>
+<p><a href="https://chat.deepseek.com/share/jqu83xiuhxsnbpoi2q"><code>microbenchmarks</code></a> 微基准测试</p>
+<p><a href="https://chat.deepseek.com/share/wura1hxt9m0crsv9wd"><code>stress tests</code></a> 压力测试</p>
+<p><a href="https://chat.deepseek.com/share/dbmp7p88j1dys2nwyo"><code>Wall-time</code></a> 墙钟时间</p>
+<p><a href="https://chat.deepseek.com/share/i35shk93ubt6s6vigd"><code>cycle counts</code></a> 周期计数</p>
+<p><a href="https://chat.deepseek.com/share/95ybph1xvzw5f0p3wj"><code>instruction counts</code></a> 指令计数</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="build-configuration"><a href="#build-configuration" class="header">Build Configuration</a></h1>
 <p>indev</p>
