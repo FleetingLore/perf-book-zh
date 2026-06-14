@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "ayu";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-7b929aba.js";
+            window.path_to_searchindex_js = "searchindex-b47b2fe8.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-90871fb8.js"></script>
@@ -188,10 +188,28 @@
 <p><strong><span style="font-size: 130%">此中文翻译由 Fleeting Lore 执笔并同步维护</span></strong></p>
 <p><a href="https://fleetinglore.github.io/perf-book-zh/">此中文翻译 - github</a></p>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="introduction"><a href="#introduction" class="header">Introduction</a></h1>
-<p>indev</p>
+<h1 id="简介"><a class="header" href="#简介">简介</a></h1>
+<p>性能对许多 Rust 程序来说都很重要</p>
+<p>本书介绍了一些提升 Rust 程序性能的技术, 包括运行时速度, 内存使用和二进制文件大小.
+<a href="#compile-times">编译时间</a> 章节还介绍了减少编译时间的技术.
+有些技术只需要调整构建配置, 但很多需要修改代码</p>
+<p>一些技术是 Rust 特有的, 但其中一些技术所体现的思想, 通过一定的调整, 可以运用于其他编程语言.
+<a href="#general-tips">通用提示</a> 这一章, 介绍了适用于任何编程语言的通用原则.
+本书主要针对 Rust, 并非通用的性能分析与优化教程.</p>
+<p>本书专注于实用且被验证过的技术:
+其中许多附有链接, 指向 PR 或其他参考资料, 展示这些技术在真实的 Rust 程序中的应用.
+这反映了主要作者的背景, 偏向编译器开发领域, 而非科学计算等其他方向</p>
+<p>本书刻意保持简洁, 重广度而非深度, 以便快速阅读.
+在适当的地方引入外部链接, 提供更深入的信息</p>
+<p>本书面向中级和高级 Rust 用户.
+初学者要学的东西已经够多, 这些技术反而会造成干扰</p>
+<hr>
+<blockquote>
+<p><strong>对于本中文翻译</strong></p>
+<p>每篇章节末尾若涉及专业术语, 会附术语表及解释链接</p>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div>
-<h1 id="benchmarking"><a class="header" href="#benchmarking">Benchmarking</a></h1>
+<h1 id="基准测试"><a class="header" href="#基准测试">基准测试</a></h1>
 <p>对于同一个任务, <strong>基准测试</strong> 可比较不同实现方法的性能.
 有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
 有时则比较同一程序的两个不同 <strong>版本</strong>.
