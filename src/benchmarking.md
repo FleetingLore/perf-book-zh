@@ -11,7 +11,7 @@
  理想情况下, 你会有各种工作负载, 反映被测试程序在使用时的情况.
  真实环境下的输入是最有效的, 但 **微基准测试** 和 **压力测试** 的适度使用也有帮助
 
-其次, 你需要一种运行工作负载的方式, 这也确定了所使用的度量标准
+其次, 你需要一种运行工作负载的方式, 这也制约了所使用的度量标准
 
 - Rust 内置的 [benchmark tests] 是一个简单的起点, 但它们使用了不稳定的特性, 只能在 Nightly Rust 上运行
 - [Criterion] 和 [Divan] 是更复杂的替代方案
@@ -28,14 +28,12 @@
 [Gungraun]: https://github.com/gungraun/gungraun
 [rustc-perf]: https://github.com/rust-lang/rustc-perf/
 
-When it comes to metrics, there are many choices, and the right one(s) will
-depend on the nature of the program being benchmarked. For example, metrics
-that make sense for a batch program might not make sense for an interactive
-program. Wall-time is an obvious choice in many cases because it corresponds to
-what users perceive. However, it can suffer from high variance. In particular,
-tiny changes in memory layout can cause significant but ephemeral performance
-fluctuations. Therefore, other metrics with lower variance (such as cycles or
-instruction counts) may be a reasonable alternative.
+至于度量标准, 有多种选择, 这取决于被测程序的特性.
+ 例如, 适用于批处理程序的, 未必适用于交互式程序.
+ **墙钟时间** 是许多情形下的自然选择, 因为它对应了用户的直观感受.
+ 然而, 它的波动可能较大.
+ 具体来说, 内存布局的微小变化可能引起显著但短暂的性能波动.
+ 因此, 其他波动较小的度量标准, 例如 **周期计数** 或 **指令计数**, 可能是合理的替代
 
 Summarizing measurements from multiple workloads is also a challenge, and there
 are a variety of ways to do it, with no single method being obviously best.
@@ -58,3 +56,9 @@ program.
 [`microbenchmarks`](https://chat.deepseek.com/share/jqu83xiuhxsnbpoi2q) 微基准测试
 
 [`stress tests`](https://chat.deepseek.com/share/wura1hxt9m0crsv9wd) 压力测试
+
+[`Wall-time`](https://chat.deepseek.com/share/dbmp7p88j1dys2nwyo) 墙钟时间
+
+[`cycle counts`](https://chat.deepseek.com/share/i35shk93ubt6s6vigd) 周期计数
+
+[`instruction counts`](https://chat.deepseek.com/share/95ybph1xvzw5f0p3wj) 指令计数
