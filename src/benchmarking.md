@@ -1,4 +1,4 @@
-# Benchmarking
+# 基准测试
 
 对于同一个任务, **基准测试** 可比较不同实现方法的性能.
  有时这可能会关联到若干程序, 例如 Firefox 与 Safari 与 Chrome.
