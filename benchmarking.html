@@ -192,11 +192,11 @@
 <p>其次, 你需要一种运行工作负载的方式, 这也制约了所使用的度量标准</p>
 <ul>
 <li>Rust 内置的 <a href="https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html">benchmark tests</a> 是一个简单的起点, 但它们使用了不稳定的特性, 只能在 Nightly Rust 上运行</li>
-<li><a href="https://github.com/bheisler/criterion.rs">Criterion</a> 和 <a href="https://github.com/nvzqz/divan">Divan</a> 是更复杂的替代方案</li>
-<li><a href="https://github.com/sharkdp/hyperfine">Hyperfine</a> 是一个出色的基准测试工具, 面向广泛的使用情形</li>
-<li><a href="https://github.com/bencherdev/bencher">Bencher</a> 可以在 CI 上持续运行基准测试, 包括 GitHub CI</li>
-<li><a href="https://github.com/gungraun/gungraun">Gungraun</a> 与 <code>cargo bench</code> 对接, 提供高精度测量</li>
-<li>也可以搭建自定义的基准测试框架, 例如 <a href="https://github.com/rust-lang/rustc-perf/">rustc-perf</a> 对 Rustc 进行基准测试</li>
+<li><a href="https://crates.io/crates/criterion">Criterion</a> 和 <a href="https://crates.io/crates/divan">Divan</a> 是更复杂的替代方案</li>
+<li><a href="https://crates.io/crates/hyperfine">Hyperfine</a> 是一个出色的基准测试工具, 面向广泛的使用情形</li>
+<li><a href="https://bencher.dev">Bencher</a> 可以在 CI 上持续运行基准测试, 包括 GitHub CI</li>
+<li><a href="https://crates.io/crates/gungraun">Gungraun</a> 与 <code>cargo bench</code> 对接, 提供高精度测量</li>
+<li>也可以搭建自定义的基准测试框架, 例如 <a href="https://github.com/rust-lang/rustc-perf">rustc-perf</a> 对 Rustc 进行基准测试</li>
 </ul>
 <p>至于度量标准, 有多种选择, 这取决于被测程序的特性.
 例如, 适用于批处理程序的, 未必适用于交互式程序.
