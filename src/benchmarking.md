@@ -21,12 +21,12 @@
 - 也可以搭建自定义的基准测试框架, 例如 [rustc-perf] 对 Rustc 进行基准测试
 
 [benchmark tests]: https://doc.rust-lang.org/nightly/unstable-book/library-features/test.html
-[Criterion]: https://github.com/bheisler/criterion.rs
-[Divan]: https://github.com/nvzqz/divan
-[Hyperfine]: https://github.com/sharkdp/hyperfine
-[Bencher]: https://github.com/bencherdev/bencher
-[Gungraun]: https://github.com/gungraun/gungraun
-[rustc-perf]: https://github.com/rust-lang/rustc-perf/
+[Criterion]: https://crates.io/crates/criterion
+[Divan]: https://crates.io/crates/divan
+[Hyperfine]: https://crates.io/crates/hyperfine
+[Bencher]: https://bencher.dev
+[Gungraun]: https://crates.io/crates/gungraun
+[rustc-perf]: https://github.com/rust-lang/rustc-perf
 
 至于度量标准, 有多种选择, 这取决于被测程序的特性.
  例如, 适用于批处理程序的, 未必适用于交互式程序.
